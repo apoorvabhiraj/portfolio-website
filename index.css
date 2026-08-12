@@ -1,0 +1,425 @@
+/* global */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* navbar */
+
+.nav-bar {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+
+.nav-links a,
+.mode {
+    text-decoration: none;
+    white-space: nowrap; /*dont allow test to move to next line */
+}
+
+
+/* hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.profile-photo {
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.text {
+    color: aliceblue;
+    margin-bottom: 0;
+}
+
+
+/* common sextion */
+
+.projects,
+.experience,
+.contributions,
+.skills,
+.certification,
+.blogs,
+.contact {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.projects,
+.experience,
+.contributions,
+.skills,
+.certification,
+.blogs,
+.contact {
+    text-align: center;
+}
+
+.projects > h2,
+.experience > h2,
+.contributions > h2,
+.skills > h2,
+.certification > h2,
+.blogs > h2,
+.contact > h2 {
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.projects > p,
+.experience > p,
+.contributions > p,
+.skills > p,
+.certification > p,
+.blogs > p,
+.contact > p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+
+/* common card prop. */
+
+.project-card,
+.experience-card,
+.contribution-card,
+.skill-group,
+.certification-card,
+.blog-card {
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover,
+.experience-card:hover,
+.contribution-card:hover,
+.skill-group:hover,
+.certification-card:hover,
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* projects */
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-card h3 {
+    margin: 15px 20px 5px;
+}
+
+.project-card p {
+    margin: 0 20px 20px;
+    line-height: 1.6;
+}
+
+
+/* buttons */
+
+.projects button,
+.contact-form button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.projects button:hover,
+.contact-form button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* experiences*/
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    padding: 25px;
+    text-align: left;
+}
+
+.experience-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.experience-card .company {
+    margin-bottom: 5px;
+}
+
+.experience-card .duration {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.experience-card p {
+    line-height: 1.6;
+}
+
+
+/* contribution */
+
+.contribution-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contribution-card {
+    padding: 25px;
+    text-align: left;
+}
+
+.contribution-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.contribution-card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contribution-card a {
+    text-decoration: none;
+}
+
+
+/* skill */
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-group {
+    padding: 25px;
+    text-align: left;
+}
+
+.skill-group h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.skill-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-group li {
+    margin-bottom: 10px;
+}
+
+
+/* certification */
+
+.certification-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.certification-card {
+    padding: 25px;
+    text-align: left;
+}
+
+.certification-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.certification-card p {
+    margin-bottom: 8px;
+}
+
+.certification-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+/* blogs */
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    padding: 25px;
+    text-align: left;
+}
+
+.blog-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.blog-card .blog-date {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.blog-card > p:not(.blog-date) {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.blog-card a {
+    text-decoration: none;
+}
+
+
+/* contact */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    text-decoration: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+/* responsive */
+
+@media (max-width: 768px) {
+
+    .projects,
+    .experience,
+    .contributions,
+    .skills,
+    .certification,
+    .blogs,
+    .contact {
+        padding: 60px 0;
+    }
+
+    .projects > h2,
+    .experience > h2,
+    .contributions > h2,
+    .skills > h2,
+    .certification > h2,
+    .blogs > h2,
+    .contact > h2 {
+        font-size: 2rem;
+    }
+
+    .project-cards,
+    .experience-cards,
+    .contribution-cards,
+    .certification-cards,
+    .blog-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-groups {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
